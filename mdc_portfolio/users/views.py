@@ -16,4 +16,10 @@ class ProjectCreate(LoginRequiredMixin, FormView):
 
 class UserProjectView(LoginRequiredMixin, TemplateView):
     template_name = 'users/index.html'
-    extra_content = {'projects' : Projects.objects.all()}
+    extra_context = {'projects' : Projects.objects.all()}
+
+def deleteProject(request, id):
+    classroom = Projects.objects.get(id=id)
+    classroom.delete()
+    return redirect('index')
+    
