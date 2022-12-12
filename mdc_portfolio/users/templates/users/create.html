@@ -2,13 +2,22 @@
 
 {% block content %}
 
-<h2 class="mt-5">Crear un nuevo proyecto</h2>
 
-<form method='post' novalidate class="mt-3">
-    {% csrf_token %}
-    {{ form.as_div }}
-    <button class="submit">Crear</button>
-</form>
+<div class="mt-5">
+    <div class="card" style="width: 50%; margin: auto">
+        <div class="card-body">
+            <h2>Añadir nuevo proyecto:</h2>
+            <form method='post' novalidate class="mt-3">
+                {% csrf_token %}
+                {{ form.as_div }}
+                <div class="d-grid">
+                    <button class="submit">Crear</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
 
  
 {% endblock content %}
