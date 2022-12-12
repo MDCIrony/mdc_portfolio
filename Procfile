@@ -1,1 +1,1 @@
-web: python .\mdc_portfolio\manage.py migrate && gunicorn mdc_portfolio.wsgi
+web: python .\mdc_portfolio\manage.py migrate && gunicorn .\mdc_portfolio\mdc_portfolio.wsgi
