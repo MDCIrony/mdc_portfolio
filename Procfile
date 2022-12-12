@@ -1,1 +1,1 @@
-web: gunicorn mdc_portfolio/mdc_portfolio.wsgi
+web: gunicorn 'mdc_portfolio.wsgi'
